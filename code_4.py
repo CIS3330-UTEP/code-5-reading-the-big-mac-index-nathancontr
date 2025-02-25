@@ -72,18 +72,23 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     return f"{maxest['name']}({maxest['iso_a3']}): ${maxest['dollar_price']}"
 
 if __name__ == "__main__":
+    print('Hello. Welcome to the Big Mac Index!')
+    print('This code can tell you the: \
+          \nAverage Price of a Big Mac in a Given Year \
+          \nAverage Price of a Big Mac by Country \
+          \nCheapest AND Most Expensive Big Mac in a Given Year \
+          ')
 
+    funyear = int(input('what Year would you like to search the database for?: '))
+    funcode = input('what Country Code would you like to use?: ')
+
+    print(f'The average price of a Big Mac in {funcode} in {funyear} is {get_big_mac_price_by_year(funyear, funcode)}')
     # print(get_big_mac_price_by_year(2015, 'usa'))
     # print(type(get_big_mac_price_by_year(2015, 'usa')))
-
-    # fun1year = int(input('what year?: '))
-    # fun1code = input('what code?: ')
-    # print(get_big_mac_price_by_year(fun1year, fun1code))
-
 
     # print(get_big_mac_price_by_country('USA'))
     # print(type(get_big_mac_price_by_country('USA')))
     
-    print(get_the_cheapest_big_mac_price_by_year(2019))
+    # print(get_the_cheapest_big_mac_price_by_year(2019))
 
-    print(get_the_most_expensive_big_mac_price_by_year(2019))
+    # print(get_the_most_expensive_big_mac_price_by_year(2019))
