@@ -5,19 +5,6 @@ big_mac_file = './big-mac-full-index.csv'
 def get_big_mac_price_by_year(year,country_code):
     df = pd.read_csv(big_mac_file)
 
-# #       vv turns country code into lowercase
-#     df['country_code'] = country_code.lower()
-# #       vv gets the starting portion of the date (just the year)
-#     dfyear = df[df['date'].str.startswith(str(year))]
-# #       vv filters for country code using the already defined year variable
-#     dfcountry = dfyear[dfyear['iso_a3'].str.lower() == country_code]
-
-#     mean_price = dfcountry['dollar_price'].mean()
-
-#     rounded = round(mean_price, 2)
-
-#     return rounded
-
     country_code = str(country_code).lower()
 
     query = f"date.str.startswith('{year}') and iso_a3.str.lower() == '{country_code}'"
