@@ -70,13 +70,16 @@ if __name__ == "__main__":
     funyear = int(input('what Year would you like to search the database for?: '))
     funcode = input('what Country Code would you like to use?: ')
 
-    print(f'The average price of a Big Mac in {funcode} in {funyear} is {get_big_mac_price_by_year(funyear, funcode)}')
+    print(f"\nThe average price of a Big Mac in '{funcode.upper()}' in {funyear} is ${get_big_mac_price_by_year(funyear, funcode)}")
     # print(get_big_mac_price_by_year(2015, 'usa'))
     # print(type(get_big_mac_price_by_year(2015, 'usa')))
 
+    print(f"\nThe average price of a Big Mac in '{funcode.upper()}' is ${get_big_mac_price_by_country(funcode)}")
     # print(get_big_mac_price_by_country('USA'))
     # print(type(get_big_mac_price_by_country('USA')))
     
+    print(f"\nThe cheapest big mac information for the year {funyear} is as follows: {get_the_cheapest_big_mac_price_by_year(funyear)}")
     # print(get_the_cheapest_big_mac_price_by_year(2019))
 
+    print(f"\nThe most expensive big mac information for the year {funyear} is as follows: {get_the_most_expensive_big_mac_price_by_year(funyear)}")
     # print(get_the_most_expensive_big_mac_price_by_year(2019))
