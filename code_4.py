@@ -43,7 +43,7 @@ def get_the_cheapest_big_mac_price_by_year(year):
 
     cheapest = cheap_year_query.loc[cheap]
 
-    return f"{cheapest['name']}({cheapest['iso_a3']}): ${cheapest['dollar_price']}"
+    return f"{cheapest['name']}({cheapest['iso_a3']}): ${round(cheapest['dollar_price'], 2)}"
 
 
 def get_the_most_expensive_big_mac_price_by_year(year):
@@ -56,7 +56,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
     maxest = max_year_query.loc[maxi]
 
-    return f"{maxest['name']}({maxest['iso_a3']}): ${maxest['dollar_price']}"
+    return f"{maxest['name']}({maxest['iso_a3']}): ${round(maxest['dollar_price'], 2)}"
 
 if __name__ == "__main__":
     
